@@ -46,6 +46,6 @@ certbot certonly \
 
 ***Test your SSL***
 ```
-openssl x509 -in /etc/letsencrypt/live/YOUR-DOMAIN/fullchain.pem  -text -noout | gre -i 'DNS:'
+openssl x509 -in /etc/letsencrypt/live/YOUR-DOMAIN/fullchain.pem  -text -noout | egrep -i 'DNS:|CN'
 ```
 
